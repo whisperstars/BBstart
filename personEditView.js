@@ -1,13 +1,24 @@
-var personEditView = Backbone.View.extend({
-    template: _.template('<input type="text" class="name" placeholder="name"/><button class="set_name">set</button>'),
+var PersonEditView = Backbone.View.extend({
+    
+    template: _.template('<input type="text" class="name" placeholder="name" value="<%= name %>"/><button class="set_name_btn">set</button>'),
 
-    initialize: function() {
-        this.model.on('change', this.render, this);
+    events: {
+        'click .set_name_btn': 'setName'
     },
 
     render: function() {
         this.$el.html(this.template(this.model.toJSON()));
         
         return this;
+    },
+
+    setModel: function(model) {
+        this.model = model;
+        this.render();
+        this.remode();
+    },
+
+    setName: function() {
+        this.model.set('name', this.$('.name').val());
     }
 });

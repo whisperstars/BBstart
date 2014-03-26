@@ -4,17 +4,11 @@ var GroupView = Backbone.View.extend({
 
     initialize: function() {
         this.render();
-		
-		this.collection.on('add', this.render, this);
     },
 
-    render: function(model) {
-		if(model === undefined) {
-			this.$el.html(this.template);
-			this.collection.each(this.renderItem, this);		
-		} else {
-			this.renderItem(model);
-		}
+    render: function() {
+		this.$el.html(this.template);
+		this.collection.each(this.renderItem, this);		
 
         return this;
     },
@@ -26,5 +20,5 @@ var GroupView = Backbone.View.extend({
             });
 
         this.$('.group_list').append(view.render().el);
-    }
+    },
 });
