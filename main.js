@@ -1,10 +1,8 @@
+var person_edit_view;
+
 $(function() {
     var page_view = new PageView({
             'el': $('#group_page')
-        }),
-    
-        person_edit_view = new PersonEditView({
-            'el': $('#group_page .edit_page')
         }),
 
         group_view = new GroupView({
@@ -13,4 +11,8 @@ $(function() {
 
             'collection': new Group()
         });
+
+    person_edit_view = new PersonEditView({
+        'el': $('#group_page .edit_page')
+    });
 });

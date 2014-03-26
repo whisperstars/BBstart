@@ -16,7 +16,7 @@ PageView = Backbone.View.extend({
     },
 
     togglePage: function() {
-        /*this.$('.list_page').toggleClass('hide');
-        this.$('.edit_page').toggleClass('hide');*/
+        this.$('.list_page').toggleClass('hide');
+        this.$('.edit_page').toggleClass('hide');
     }
 });
