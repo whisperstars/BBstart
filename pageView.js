@@ -3,8 +3,8 @@ PageView = Backbone.View.extend({
     template: _.template('<div class="list_page"></div><div class="edit_page hide"></div>'),
 
     events: {
-       'click .edit_btn': 'tooglePage',
-       'click .set_name_btn': 'tooglePage'
+       'click .edit_btn': 'togglePage',
+       'click .set_name_btn': 'togglePage'
     },
 
     initialize: function() {
@@ -15,8 +15,8 @@ PageView = Backbone.View.extend({
         this.$el.html(this.template());
     },
 
-    toodlePage: function() {
-        this.$('.list_page').toogleClass('hide');
-        this.$('.edit_page').toogleClass('hide');
+    togglePage: function() {
+        /*this.$('.list_page').toggleClass('hide');
+        this.$('.edit_page').toggleClass('hide');*/
     }
 });

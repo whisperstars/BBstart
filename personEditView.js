@@ -15,7 +15,6 @@ var PersonEditView = Backbone.View.extend({
     setModel: function(model) {
         this.model = model;
         this.render();
-        this.remode();
     },
 
     setName: function() {

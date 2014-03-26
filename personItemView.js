@@ -17,6 +17,6 @@ var PersonItemView = Backbone.View.extend({
     },
 
     renderEditPage: function() {
-        person_edit_view.setModel(this.model);
+        //person_edit_view.setModel(this.model);
     }
 });
