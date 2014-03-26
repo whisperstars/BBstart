@@ -1,6 +1,6 @@
 var GroupView = Backbone.View.extend({
 
-    template: _.template('<ul class="group_list"></ul>'),
+    template: _.template('<table class="group_list"></table>'),
 
     initialize: function() {
         this.render();
@@ -16,7 +16,7 @@ var GroupView = Backbone.View.extend({
 
     renderItem: function(person) {
         var view = new PersonItemView({
-                'tagName': 'li',
+                'tagName': 'tr',
                 'model': person
             });
 

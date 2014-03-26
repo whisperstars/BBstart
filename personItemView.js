@@ -1,6 +1,6 @@
 var PersonItemView = Backbone.View.extend({
 
-    template: _.template('<%= name %>'),
+    template: _.template('<td><%= name %></td>'),
 
     initialize: function() {
         this.model.on('change', this.render, this);
@@ -8,6 +8,7 @@ var PersonItemView = Backbone.View.extend({
 
     render: function() {
         this.$el.html(this.template(this.model.toJSON()));
+
         return this;
     }
 });
