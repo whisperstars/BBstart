@@ -1,6 +1,6 @@
 var page_view,
     person_edit_view,
-    person_edit_view;
+    person_view;
 
 $(function() {
     page_view = new PageView({
