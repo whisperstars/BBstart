@@ -18,6 +18,5 @@ var PersonItemView = Backbone.View.extend({
 
     renderEditPage: function() {
         Backbone.Mediator.pub('person:edit_start', this.model);
-        //person_edit_view.setModel(this.model);
     }
 });
