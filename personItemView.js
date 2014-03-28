@@ -1,12 +1,12 @@
 var PersonItemView = Backbone.View.extend({
 
-    template: _.template('<td><%= name %></td><td><button class="edit_btn btn">Edit</button></td>'),
-
 	events: {
 	   'click .edit_btn': 'renderEditPage'
 	},
 	
     initialize: function() {
+        this.template = _.template($('#PersonItemView').html());
+
         this.model.on('change', this.render, this);
     },
 

@@ -1,9 +1,11 @@
 var PersonEditView = Backbone.View.extend({
-    
-    template: _.template('<input type="text" class="name" placeholder="name" value="<%= name %>"/><button class="set_name_btn">set</button>'),
 
     events: {
         'click .set_name_btn': 'setName'
+    },
+
+    initialize: function() {
+        this.template = _.template($('#PersonEditView').html());
     },
 
     render: function() {

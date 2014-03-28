@@ -1,8 +1,8 @@
 var GroupView = Backbone.View.extend({
 
-    template: _.template('<table class="group_list"></table>'),
-
     initialize: function() {
+        this.template = _.template($('#GroupView').html());
+
         this.render();
     },
 
