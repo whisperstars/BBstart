@@ -6,6 +6,8 @@ var PersonEditView = Backbone.View.extend({
 
     initialize: function() {
         this.template = _.template($('#PersonEditView').html());
+
+        Backbone.Mediator.sub('person:edit_start', this.setModel, this);
     },
 
     render: function() {
