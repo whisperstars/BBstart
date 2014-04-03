@@ -1,8 +1,8 @@
-var page_view,
-    person_edit_view,
-    person_view;
-
-$(function() {    
+$(function() {
+    var page_view,
+        person_edit_view,
+        person_view;
+    
     page_view = new PageView({
         'el': $('#group_page')
     });
